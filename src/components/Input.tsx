@@ -4,7 +4,7 @@ export function Input() {
   return (
     <div className="relative">
       <input
-        className="block w-full h-12 m-auto mb-4 -mt-10 py-4 px-5 pr-1 text-gray-600 bg-white rounded-full border-2 border-green-600 outline-none"
+        className="block w-full h-12 m-auto mb-6 -mt-10 py-4 px-5 pr-1 text-gray-600 bg-white rounded-full border-2 border-green-600 outline-none"
         type="text"
         placeholder="Ex: 1000 kWh"
       />
