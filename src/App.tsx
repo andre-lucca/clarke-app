@@ -1,5 +1,6 @@
 import { Header } from "./components/Header"
 import { Input } from "./components/Input"
+import { SupplierList } from "./components/SupplierList"
 
 function App() {
 
@@ -10,9 +11,7 @@ function App() {
         <div className="m-auto w-full p-4 max-w-[40rem]">
           <Input />
 
-          <div className="border border-gray-200 p-2 rounded-md shadow-sm">
-            Fornecedores
-          </div>
+          <SupplierList />
         </div>
       </main>
     </div >
