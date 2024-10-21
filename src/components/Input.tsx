@@ -6,13 +6,18 @@ import { useContext } from "react"
 import { supplierContext } from "../contexts/supplierContext"
 
 export function Input() {
-  const { register, handleSubmit } = useForm<{ monthlyUsage: string }>({ defaultValues: { monthlyUsage: "" } })
+  const { register, handleSubmit, watch, setValue } = useForm<{ monthlyUsage: string }>({ defaultValues: { monthlyUsage: "" } })
   const { setSuppliers } = useContext(supplierContext)
 
   const handleFetchSuppliers = async ({ monthlyUsage }: { monthlyUsage: string }) => {
-    const response = await api.get(`/suppliers?monthlyUsage=${monthlyUsage}`)
+    try {
+      const response = await api.get(`/suppliers?monthlyUsage=${monthlyUsage}`)
 
-    setSuppliers(response.data)
+      setSuppliers(response.data)
+
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
@@ -22,13 +27,14 @@ export function Input() {
         type="text"
         placeholder="Ex: 1000 kWh"
         {...register("monthlyUsage", {
-          onChange: (event) => {
-            event.target.value = event.target.value.replace(/\D/g, "")
+          onChange: () => {
+            setValue("monthlyUsage", watch("monthlyUsage").replace(/\D/g, ""))
           }
         })}
       />
       <button
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-green-600 hover:bg-green-500 p-0.5 rounded-full cursor-pointer hover:scale-105 transition-colors"
+        disabled={!Number(watch("monthlyUsage"))}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white bg-green-600 hover:bg-green-500 p-0.5 rounded-full cursor-pointer hover:scale-105 transition-colors disabled:cursor-not-allowed disabled:hover:scale-100 disabled:bg-zinc-500"
         type="submit"
       >
         <ArrowRight

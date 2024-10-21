@@ -1,6 +1,7 @@
 import { createContext } from 'react'
 
 export type SupplierSchema = {
+  id: string
   name: string
   logo: string
   originState: string
