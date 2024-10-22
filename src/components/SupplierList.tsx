@@ -16,10 +16,11 @@ export function SupplierList() {
   })
 
   return (
-    <ul>
+    <ul data-cy="supplierList">
       {
         sortedSuppliers.map((supplier) => (
           <li
+            data-cy={supplier.couldServe}
             key={supplier.id}
             className={`${supplier.couldServe ? "hover:translate-x-4" : "opacity-50 hover:cursor-not-allowed"} flex gap-4 mb-3 border shadow-md transition-transform rounded-md p-2 cursor-pointer`}
           >

@@ -35,7 +35,7 @@ export function ApiStatus() {
   }, [])
 
   return (
-    <span className=" flex items-center gap-2 px-4 py-2 border rounded-full text-white text-xs font-bold">
+    <span data-cy="apiStatus" className="flex items-center gap-2 px-4 py-2 border rounded-full text-white text-xs font-bold">
       <span
         className={`${apiStatus.isWaiting
           ? "bg-yellow-500"
