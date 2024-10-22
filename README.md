@@ -5,6 +5,8 @@ Esta é a SPA de fornecedores de energia, sendo o Frontend do projeto Full Stack
 
 Para o Backend do projeto visite o [Github do Backend](https://github.com/andre-lucca/clarke-api)
 
+Link para o Deploy [aqui](https://clarke-app.netlify.app/)
+
 ## Principais tecnologias usadas
 
  - Typescript
