@@ -1,50 +1,44 @@
-# React + TypeScript + Vite
+# Desafio Clarke Energia | Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre o projeto
+Esta é a SPA de fornecedores de energia, sendo o Frontend do projeto Full Stack do desafio da Clarke Energia.
 
-Currently, two official plugins are available:
+Para o Backend do projeto visite o [Github do Backend](https://github.com/andre-lucca/clarke-api)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Principais tecnologias usadas
 
-## Expanding the ESLint configuration
+ - Typescript
+ - React
+ - TailwindCSS
+ - Vite
+ - Axios
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Como rodar em ambiente local
 
-- Configure the top-level `parserOptions` property like this:
+### Você precisa do `Node` instalado para executar o projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone ou baixe o repositório
+
+```sh
+git clone git@github.com:andre-lucca/clarke-app.git
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Instale as dependências
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm i
 ```
+
+3. Crie um arquivo .env usando o .env.example como base
+
+```sh
+cp ./.env.example ./.env
+```
+
+4. Execute o APP
+
+```sh
+npm run dev
+```
+
+Pronto, acesse `http://localhost:5173` caso o navegador não abra automaticamente.
