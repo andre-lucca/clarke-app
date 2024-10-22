@@ -3,7 +3,7 @@
 ## Sobre o projeto
 Esta é a SPA de fornecedores de energia, sendo o Frontend do projeto Full Stack do desafio da Clarke Energia.
 
-Para o Backend do projeto visite o [Github do Backend](https://github.com/andre-lucca/clarke-api)
+Este projeto depende do Backend para funcionar corretamente, visite o [Github do Backend](https://github.com/andre-lucca/clarke-api), e siga as instruções.
 
 Link para o Deploy [aqui](https://clarke-app.netlify.app/)
 
