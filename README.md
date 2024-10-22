@@ -12,6 +12,7 @@ Para o Backend do projeto visite o [Github do Backend](https://github.com/andre-
  - TailwindCSS
  - Vite
  - Axios
+ - Cypress
 
 ## Como rodar em ambiente local
 
@@ -42,3 +43,9 @@ npm run dev
 ```
 
 Pronto, acesse `http://localhost:5173` caso o navegador não abra automaticamente.
+
+A interface gráfica do Cypress é a maneira mais simples de testar
+
+```node
+npx cypress open
+```
